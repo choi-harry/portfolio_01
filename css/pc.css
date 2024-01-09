@@ -1,0 +1,1626 @@
+@media all and (orientation:landscape){
+.pc_wrap {
+    /* 크기값 */
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    /* 위치값 */
+    margin: 0 auto;
+    /* position: relative; */
+    
+    /* 배경값 */
+    background: url(../img/back.jpg)center/100% repeat-y;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: 1s;
+}
+
+/* pc_wrap 자식요소(3) : 해더/메인/푸터(relative) */
+.pc_wrap
+ header,main,footer{
+    position: relative;
+    margin: 0 auto;
+}
+/*
+===========================================
+                header 영역
+===========================================
+*/
+.pc_header {
+    /* 크기값 */
+    width: 100%;
+    height: 18vh;
+    padding-top: 3vh;
+    /* 위치값 relative*/ 
+    top: 0;
+    /* 영역확인 */
+    /* background: #ff8e8e;
+    opacity: 0.5; */
+}
+
+.header_title {
+    /* 크기값 :h1태그는 블럭
+       높이값 : text line-h*/
+    width: 100%;
+    line-height: 8vh;
+    /* pc 폰트값 */
+    font-size: 2.5rem;
+    text-align: center;
+    /* 영역확인 */
+    /* background-color: aqua; */
+}
+
+.header_text {
+    /* 크기값 :h2태그는 블럭
+    높이값 : text line-h*/
+    width: 100%;
+    line-height: 4vh;
+    /* pc 폰트값 */
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    font-family: 'NanumGyuRiEuiIrGi';
+    padding: 1vh ;
+    /* 영역확인 */
+    /* background-color: rgb(1, 155, 155); */
+}
+
+.header_text span {
+    font-size: 1.8rem;
+    letter-spacing: 5px;
+    color: #eb4949;
+}
+
+/*
+===========================================
+                main 영역
+===========================================
+*/
+.pc_main {
+    width: 95%;
+    height: 66vh;
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    /* padding: 0 5%; */
+}
+
+.pc_main>div {
+    position: absolute;
+}
+
+/* 01 프로젝트 영역 */
+
+.left_top_box {
+    width: 25%;
+    height: 26%;
+    /* background-color: aquamarine; */
+    top: 16%;
+    left: 4%;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.left_top_box img{
+    object-fit: contain;
+}
+.trans{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* ================
+.left_top 안에 "폴더"요소
+================ */
+/* 폴더아이콘 공통스타일 */
+.folder00 {
+    /* position: absolute; */
+    width: calc(100% / 4);
+    height: 46%;
+    /* font-family: 'NanumGyuRiEuiIrGi'; */
+    /* font-family: 'IM_Hyemin-Bold'; */
+    font-family: 'UhBeeSe_hyun';
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition-duration: 1s;
+    display: none;
+    /* overflow: hidden; */
+    /* bottom: 25px; */
+    /* letter-spacing: 2px; */
+}
+
+.left_top_box>div:hover {
+    scale: 1.1;
+    transform: translateY(-10px);
+}
+
+.folder_3,
+.folder_4 {
+    margin-top: 20%;
+}
+
+/*개별스타일*/
+.folder_1 {
+    transform: rotate(5deg);
+    /* left: 0;
+    bottom: 60px; */
+}
+
+.folder_3 {
+    transform: rotate(-5deg);
+}
+
+.left_bottom_box {
+    width: 18%;
+    height: 34%;
+    /* background-color: aquamarine; */
+    bottom: 25%;
+    left: 10%;
+}
+
+/* ================
+.left_bottom 안에 "캐릭터"요소
+=================== */
+
+.p_title {
+    /* height: 32%; */
+    position: absolute;
+    bottom: -120px;
+    left: 50%;
+    margin-left: calc(-40%);
+}
+
+/* 02 어바웃 영역 */
+.center_box {
+    width: 30%;
+    height: 65%;
+    /* background-color: aquamarine; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-58%, -65%);
+}
+
+.center_box p {
+    padding-top: 5px;
+    /* font-family: 'NanumGyuRiEuiIrGi'; */
+    /* font-family: 'IM_Hyemin-Bold'; */
+    font-family: 'UhBeeSe_hyun';
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    position: absolute;
+}
+
+.a_title {
+    /* height: 60px; */
+    position: absolute;
+    top: -25%;
+    left: 50%;
+    margin-left: -50px;
+    cursor: pointer;
+}
+
+.center_character {
+    height: 22vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+}
+.main_graphic:hover{
+    rotate: -10deg;
+    transition-duration: 0.3s;
+}
+
+.a_con{
+    display: none;
+    cursor: pointer;
+}
+
+.a_con img:hover {
+    animation-name: a_con_move;
+    animation-duration: 0.4s;
+    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
+}
+
+@keyframes a_con_move {
+    0% {
+        scale: 1;
+        opacity: 1;
+    }
+
+    /* 0%{scale:1.2; opacity: 1;} */
+    100% {
+        scale: 1.1;
+        opacity: 0.5;
+    }
+}
+.a_con:hover p::after{
+    scale: 1.8;
+}
+.a_con p::after{
+    content: "";
+    font-size: 0.7rem;
+    font-family: 'Pretendard';
+    line-height: 55px;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+    text-align: center;
+    position: absolute;
+    top:20px;left:0;
+    width: 100px;
+    height: 50px;
+    /* background-color: #eb4949; */
+    background: url(../img/speech_ballons01.png) 0 0 / 200px no-repeat;
+    transition-duration: 0.2s;
+    display: block;
+    scale: 0;
+}
+
+.center_star p::after{
+    content: "프로필 소개";
+}
+.center_house p::after{
+    content: "홈페이지 소개";
+    top: 30px;
+}
+.center_pig p::after{
+    content: "캐릭터 소개";
+}
+.center_star {
+    height: 20%;
+    position: absolute;
+    top: 50%;
+    margin-top: 28px;
+    left: 0;
+}
+
+.center_star p {
+    transform: rotate(10deg);
+}
+
+.center_house {
+    height: 15%;
+    position: absolute;
+    bottom: 0;
+    right: 45%;
+}
+
+.center_house p {
+    transform: rotate(-10deg);
+}
+
+.center_pig {
+    height: 26%;
+    position: absolute;
+    bottom: 50%;
+    margin-bottom: -136px;
+    right: -5%;
+}
+
+.center_pig p {
+    transform: rotate(5deg);
+}
+
+.center_text_wrap {
+    position: relative;
+}
+/* element wrap */
+
+.element{
+    display: none;
+}
+.el_02{
+    top: -16%;
+    left: 88%;
+}
+.el_03{
+    top: 12%;
+    left: -47%;
+}
+.el_04{
+    top: 89%;
+    left: 107%;
+    rotate: 30deg;
+}
+.el_05{
+    top: 113%;
+    left: -60%;
+}
+.element p::after{
+    /* 내용형식 */
+    content: "";
+    display: block;
+    /* 위치값 */
+    position: absolute;
+    /* 크기위치 */
+    /* 그외 효과 */
+    transition-duration: 0.2s;
+    scale: 0.8;
+    opacity: 0.7;
+}
+.el_01::after{
+    width: 210px;
+    height: 143px;
+    background: url(../img/el.png) 26% 26% / 1600px no-repeat;
+}
+.el_02::after{
+    width: 220px;
+    height: 200px;
+    background: url(../img/el.png) 6% 9%  / 1600px no-repeat;
+}
+.el_03::after{
+    width: 100px;
+    height: 90px;
+    background: url(../img/el.png) 44% 25%  / 1600px no-repeat;
+}
+.el_04::after{
+    width: 85px;
+    height: 140px;
+    background: url(../img/el.png) 73% 32%  / 1600px no-repeat;
+}
+.el_05::after{
+    width: 260px;
+    height: 120px;
+    background: url(../img/el.png) 24% 79%  / 1600px no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 03 콘택트 영역 */
+.right_top_box {
+    width: 15%;
+    height: 43%;
+    /* background-color: aquamarine; */
+    top: 29%;
+    right: 6%;
+}
+
+.right_bottom_box {
+    width: 24%;
+    height: 30%;
+    /* background-color: aquamarine; */
+    bottom: 5%;
+    right: 0;
+}
+
+.right_character {
+    height: 200px;
+    position: absolute;
+    bottom: 20%;
+}
+
+.c_title{
+    /* height: 30%; */
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.title p::after{
+    content: "";
+    font-size: 0.7rem;
+    font-family: 'Pretendard';
+    line-height: 55px;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+    text-align: center;
+    position: absolute;
+    bottom: -180%;right: 30%;
+    width: 100px;
+    height: 50px;
+    /* background-color: #eb4949; */
+    background: url(../img/speech_ballons01.png) 0 0 / 200px no-repeat;
+    transition-duration: 0.2s;
+    display: block;
+    scale: 0;
+}
+
+.c_title p::after{
+    content: "연락 하기";
+}
+.p_title p::after{
+    content: "프로젝트 보기";
+    bottom: -150%;right: 30%;
+}
+.title:hover p::after{
+    scale: 1.8;
+}
+
+.c_sns_text{
+    font-size: 1.1rem;
+    line-height: 2.3rem;
+    position: relative;
+    top: -164%;
+    left: 37%;
+    rotate: -10deg;
+    display: none;
+}
+.c_sns_text p{
+    padding-left: 38px;
+}
+.cst::after{
+    /* 내용형식 */
+    content: "";
+    display: block;
+    /* 위치값 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* 크기위치 */
+    width: 35px;
+    height: 35px;
+    /* 그외 효과 */
+    transition-duration: 0.2s;
+    opacity: 0.7;
+}
+.cst_1{
+    background: url(../img/sns_mail.png) 0 0 / 30px no-repeat;
+}
+.cst_3{
+    background: url(../img/sns.png) 0 0 / 30px no-repeat;
+}
+.cst_2{
+    background: url(../img/sns_insta.png) 0 0 / 30px no-repeat;
+}
+
+
+
+/* 04 서브페이지 영역 */
+.contents_wrap {
+    position: fixed;
+    /* font-size: 200px; */
+    text-align: center;
+    display: none;
+}
+
+.contents_w_1 {
+    width: 32%;
+    height: 54%;
+    scale: 0.8;
+    top: -23%;
+    /* border: 1px solid rebeccapurple; */
+    right: 55%;
+}
+.contents_w_2 {
+    width: 100%;
+    height: 100vh;
+    /* scale: 0.8; */
+    top: -40%;
+    right: 12%;
+}
+
+.folder_0_in {
+    width: 100%;
+    height: 100%;
+    /* background: #fff; */
+    position: absolute;
+    /* border: 3px solid red; */
+    border-radius: 5px;
+    /* top: 3%;
+    left: 50%;
+    margin-left: -28%; */
+    /* line-height: 2; */
+    /* display: none; */
+    /* overflow: hidden; */
+    font-size: 24px;
+    display: none;
+}
+
+.folder_0_in p {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    /* border-bottom: 1px solid black; */
+    padding-top: 5%;
+    font-size: 0.8rem;
+}
+
+/* ================
+.folder_0_in 안에 (4)
+=================== */
+
+.web_title {
+    width: 100%;
+    height: 16%;
+    /* border-bottom: 1px solid black; */
+    position: relative;
+    /* line-height: 2; */
+}
+/* 공통영역 */
+.apwp_wrap{
+    width: 100%;
+    height: 84%;
+    position: relative;
+    /* padding: 3% 10%; */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.a01_text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0.7rem;
+}
+.w00_text{
+    position: absolute;
+    font-size: 0.7rem;
+    line-height: 1.7rem;
+    display: none;
+    transition-duration: 0.5s;
+}
+.w01_text{
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    font-size: 0.7rem;
+    line-height: 1.7rem;
+    rotate: -4deg;
+    display: none;
+    transition-duration: 0.5s;
+}
+.w02_text{
+    width: 300px;
+    height: 200px;
+    top: 75%;
+    left: 163%;
+    rotate: -29deg;
+}
+.w03_text{
+    width: 300px;
+    height: 200px;
+    top: 70%;
+    left: 78%;
+    rotate: -29deg;
+}
+.w04_text{
+    width: 300px;
+    height: 200px;
+    top: -19%;
+    left: -158%;
+    rotate: -12deg;
+}
+.project:hover div{
+    display: block;
+}
+.w08_con,
+.w10_con {
+    position: absolute;
+    top: 100px;
+}
+
+.project {
+    height: 100%;
+    background: url(../img/sketch_box2.png)0 0/ 98% no-repeat;
+    /* background-color: rgba(255, 2255, 255, 0.5); */
+    border-radius: 6%;
+    /* background-size: contain; */
+    text-align: center;
+    position: relative;
+    /* box-shadow: 2px 2px 3px rgba(93, 93, 93, 0.4); */
+}
+/* 마스크 */
+.ps_wrap{
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+    position: relative;
+    overflow: hidden;
+}
+
+/* 움직이는 가로 긴 사각랩 */
+.project1_movebox{
+    width: calc(100% * 5);
+    height: 100%;
+    position:absolute;
+    /* background-color: #727272; */
+    top: 0;
+    left: 0;
+}
+.project_1 {
+    width: 20%;
+    height: 100%;
+    /* background-color: aqua; */
+    float: left;
+}
+.project_1 h3{
+    width: 100%;
+    height: 10%;
+    font-size: 1rem;
+    line-height: 2.2rem;
+    text-align: center;
+    float: left;
+    display: block;
+}
+.project_1 img{
+    width: 100%;
+    height: 80%;
+    float: left;
+    /* background-color: yellow; */
+    object-fit: cover;
+}
+/* 넘기는 버튼 */
+
+.butt{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    border-radius: 30px;
+    /* background-color: #fff; */
+    text-align: center;
+    line-height: 40px;
+    z-index: 99;
+    cursor: pointer;
+}
+.left_but,.left_but_2{
+    left: 10px;
+}
+.right_but,.right_but_2{
+   right: 10px;
+}
+/*  */
+.project_3 {
+    width: 29%;
+    height: 32%;
+    margin-bottom: 16px;
+}
+
+.project_4 {
+    width: 25%;
+    height: 36%;
+    background: url(../img/sketch_box2.png)0 29px/ 145px no-repeat;
+}
+
+.project_3 img {
+    width: 70%;
+    height: 41%;
+    margin-top: 5px;
+}
+
+.project_4 img {
+    width: 70%;
+    height: 60%;
+}
+
+.project_3:hover {
+    scale: 1.1;
+    /* box-shadow: 1px 5px 10px rgba(111, 111, 111, 0.5); */
+}
+
+.project_4:hover {
+    scale: 1.1;
+    /* box-shadow: 1px 5px 10px rgba(111, 111, 111, 0.5); */
+}
+
+.web_wrap .w06_con {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* 어바웃 하위페이지 
+02 하위페이지 나가기 닫힘버튼 */
+.about_close{
+    width: 100px;
+    height: 100px;
+    /* 크기값 */
+    position: fixed;
+    top: calc(50% - 50px);
+    right: 48%;
+    /* 위치값 */
+    background-color: #fbf5ec;
+    border-radius: 60px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    /* 컬러&스타일 */
+    transition-duration: 0.5s;
+}
+.about_close p{
+    width: 80px;
+    height: 80px;
+    border: 1px dashed #727272;
+    /* border: 1px dotted #727272; */
+    border-radius: 50px;
+    position: absolute;
+    top: calc(50% - 40px);
+    left: calc(50% - 40px);
+    line-height: 80px;
+    text-align: center;
+    z-index: 9;
+}
+/* 닫힘버튼의 효과(텍스트 교체) */
+/* "close"버튼 마우스오버 시: X표시로 전환 */
+.about_close:hover {
+    rotate: 180deg;
+    font-size: 0rem;
+}
+.about_close:hover::after{
+    content: "X";
+    width: 80px;
+    height: 80px;
+
+    font-size: 1.3rem;
+    line-height: 100px;
+    text-align: center;
+
+    z-index: 10;
+}
+/* 어바웃 하위페이지 
+01 배경영역(라운딩,쉐도우) */
+.center_con_wrap {
+    width: 50%;
+    height: 98vh;
+    background-color: #fbf5ec;
+    padding: 40px;
+    padding-bottom: 0;
+    position: fixed;
+    border-radius: 30px 0 0 0;
+    text-align: center;
+    /* transform-origin: 0 0; */
+    bottom: 0;
+    right: 0;
+    box-shadow: 1px 5px 10px rgb(62 62 62 / 80%);
+    /* display: none; */
+}
+
+/* 
+01 상단 카테고리선택 영역 (프로필/홈페이지/캐릭터 소개)의 부모
+*/
+.tab_wrap {
+    width: 100%;
+    height: 6vh;
+    /* background: #ababab; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.kategory {
+    width: calc(100% / 3);
+    height: 100%;
+    line-height: 6vh;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.kategory:hover{
+    color: #eb4949;
+    animation-name: kaka;
+    animation-duration: 0.4s;
+    animation-iteration-count: 2;
+}
+.kategory.on{
+    color: #eb4949;
+}
+@keyframes kaka {
+    0% {
+        rotate: -5deg;
+    }
+    100% {
+        rotate: 5deg;
+    }
+}
+/* TODO : 551~600까지 수정하기 */
+/* 
+===========================
+  중심 내용삽입 영역 > 첫번째 center_in
+=========================== 
+*/
+.a_text_wrap {
+    width: 100%;
+    height: 90vh;
+    border: 3px solid rgba(98, 98, 98, 0.1);
+    overflow: hidden;
+    overflow-y: scroll;
+    position: relative;
+}
+
+/* 
+   00 페이지 공통스타일 : 크기값,배경 그리드이미지 
+   */
+
+.center_in {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgb(255, 214, 214);
+    background-image: url(../img/plaid.png);
+    background-size: cover;
+    font-size: 1rem;
+    position: relative;
+    display: block!important;
+    font-family: 'iceHimchan-Rg';
+
+    /* z-index: 6; */
+    /* display: flex;
+    flex-flow: column; */
+}
+
+/* 
+   00 공통 타이틀 스타일 
+    */
+.a_page_title {
+    width: 240px;
+    height: 90px;
+    /* position: absolute; */
+    background: url(../img/one_circle.png)0 0 / 100% no-repeat;
+    /* background-repeat: no-repeat; */
+    margin: 20px auto;
+    text-align: center;
+    line-height: 7rem;
+    font-size: 1.6rem;
+}
+
+/* 
+===========================
+어바웃 하위페이지 > 01 프로필 소개
+=========================== 
+*/
+/* 타이틀 : 공통스타일  */
+/* 내용  : intro + intro2 */
+.intro {
+    width: 90%;
+    height: 16vw;
+    /* height: 16vw; */
+    /* background-color: #80caff; */
+    margin: 0 auto;
+    /* margin-top: 50px; */
+    display: flex;
+    font-size: 1rem;
+    text-align: left;
+    /* font-size: 1.3rem; */
+}
+
+/* 프로필 사진들어갈 곳============================= < 배경으로 프로필 사진 > ========================= */
+.a_main_photo {
+    width: 26vh;
+    height: 16vw;
+    position: relative;
+    background: url(../img/profile_me.png) 0px 0px / 52vh no-repeat;
+}
+
+.a_main_photo::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: url(../img/profile_me.png) -26vh 0 / 52vh no-repeat;
+    transition: all 1s;
+}
+
+.a_main_photo:hover::after {
+    width: 26vh;
+}
+
+/* 프로필 정보란 ============================= < 1/2 프로필 정보 > ========================= */
+/* intro1:프로필 정보 > 영역 */
+.a_page2_text {
+    width: calc(100% - 26vh);
+    height: 100%;
+    position: relative;
+    /* border: 1px solid black; */
+    padding: 20px 30px;
+}
+
+/* 프로필 정보 > 제목태그(구분) */
+.a_page2_text span {
+    font-family: 'UhBeeSe_hyun';
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: 2px;
+
+    border-bottom: 2px solid #eb4949;
+    color: #eb4949;
+}
+
+/* 프로필 정보 > 내용태그 */
+.a_page2_text div{
+    /* margin-top: 20px; */
+    width: 100%;
+    height: calc(100% - 3rem);
+    padding-top: 1.5rem;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+}
+
+/* 2번째줄 프로필 정보 > 자격사항 박스영역 ============================= < 2/2 프로필 정보 > ========================= */
+/* 경력&자격 정보 > 영역 */
+.intro2 {
+    width: 90%;
+    height: 18vw;
+    margin-top: 50px;
+    font-size: 0.8rem;
+    text-align: left;
+    padding-left: 40px;
+    /* border: 1px solid black; */
+}
+/* 경력&자격 정보 > 제목태그 */
+.in2_title {
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    position: relative;
+    /* padding-top: 10px; */
+    padding: 15px 0;
+    padding-left: 40px;
+    background: url(../img/ok.png) -40px 10px/ 80px no-repeat;
+    line-height: 2rem;
+}
+/* 제목태그 왼쪽 아이콘 */
+.in2_title::after {
+    content: " ";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: url(../img/ok.png) 0 10px / 80px no-repeat;
+    line-height: 50px;
+    transition: all 0.5s;
+}
+
+.in2_title:hover::after {
+    width: 40px;
+}
+
+.in2_title:hover {
+    color: #eb4949;
+}
+/* 자격&경력 정보 > 텍스트내용 */
+.in2_text_box{
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+ /* 팝업 편지지 */
+.p_leter {
+    width: 34%;
+    height: 32%; 
+    position: absolute;
+    bottom: 5%;
+    right: 0;
+    cursor: pointer;
+}
+
+.p_leter:hover {
+    scale: 1.2;
+}
+/* 팝업 편지봉투 >클릭 전 */
+.p_leter>p {
+    font-size: 1rem;
+    color: #eb4949;
+    position: absolute;
+    rotate: -12deg;
+    top: -20px;
+    left: 8vh;
+}
+/* 클릭시 : 팝업창 어둠영역 */
+.back_dark {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+/* 클릭시 : 팝업창 영역 */
+.p {
+    width: 44%;
+    /* background-color: #eb4949; */
+    position: relative;
+    margin: 0 auto;
+    top: 50%;
+    margin-top: -30%;
+}
+
+/* 클릭시 : 편지지 이미지&내용 */
+.p_text {
+    width: 450px;
+    height: 400px;
+    background: url(../img/text_letter.png)0 0 / 100% no-repeat;
+    /* position: absolute; */
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%,40%); */
+    rotate: -5deg;
+    padding: 35px;
+    line-height: 2rem;
+    font-size: 1.1rem;
+    text-align: left;
+    color: #727272;
+    transition: all 1s;
+    position: relative;
+}
+
+.p_text:hover {
+    scale: 1.1;
+    rotate: 1deg;
+    color: #000;
+}
+/* 팝업 편지지창 닫힘버튼 */
+.close_circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    border: 3px solid #fff;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 50px;
+    color: #fff;
+    margin: 20px auto;
+    cursor: pointer;
+    rotate: 0;
+    transition-duration: 1s;
+}
+
+.close_circle:hover {
+    transform: rotate(180deg);
+    border: 3px solid #eb4949;
+    color: #eb4949;
+}
+
+
+/* 
+===========================
+어바웃 하위 > 02 홈페이지 소개
+=========================== 
+*/
+.a_page1_photo {
+    width: 90%;
+    height: 35%;
+    background: url(../img/home_sketch_el02.png)0 0 / 100% no-repeat;
+    margin: 0 auto;
+    position: relative;
+}
+
+.a_page1_textbox {
+    width: 90%;
+    height: 30%;
+    /* border: 5px solid #5eb0ea; */
+    font-size: 1.3rem;
+    padding: 5% 0;
+    margin: 0 auto;
+}
+
+.a_page1_textbox span {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #eb4949;
+}
+.a_page1_textbox p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin-top: 20px;
+}
+.a_page1_butt{
+    width: 50%;
+    height: calc(100% - 68% - 90px);
+    margin: 0 auto;
+    padding: 2% 0;
+
+    /* background-color: #eb4949; */
+}
+.ap_but{
+    width: 47%;
+    height: 4vw;
+    float: left;
+    border-radius: 30vh;
+    font-size: 1.2rem;
+    line-height: 4vw;
+    border: 2px dashed #eb4949;
+    transition-duration: 0.5s;
+}
+.ap_but:hover{
+    scale: 1.1;
+    background-color: #eb4949;
+    color: #fff;
+}
+.ap_b1{
+    margin-right: 1vw;
+    background-color: #ff8e8e;
+}
+.home_el01{
+    width: 40px;
+    position: absolute;
+    left: 10%;
+    bottom: -20px;
+}
+/* .ap_b2{
+    border: 2px dashed #eb4949;
+} */
+.a_page3_photo {
+    width: 90%;
+    height: 35%;
+    background: url(../img/pig_character.png)45%  35% / 150% no-repeat;
+    margin: 0 auto;
+    position: relative;
+}
+.a_page3_textbox{
+    width: 90%;
+    height: 20%;
+    /* border: 5px solid #5eb0ea; */
+    font-size: 1.3rem;
+    line-height: 2rem;
+    padding: 5% 0;
+    margin: 0 auto;
+}
+/*
+===========================================
+                footer 영역
+===========================================
+*/
+.pc_footer {
+    height: 15vh;
+    padding-top: 20px;
+    /* 영역확인 */
+    /* background: #428a75; */
+}
+/* 정보영역 */
+.btm{
+    /* 크기값 */
+    /* width: 56%; */
+    width: 70%;
+    /* 정렬 */
+    display: flex;
+    flex-wrap: wrap;
+    float: left;
+    margin-left: 50px;
+}
+/* bl의 타이틀 */
+.btm dt{
+    /* 폰트값 */
+    font-size: 1.8rem;
+    line-height: 0.8;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #565656;
+    /* 선 아래 영역 */
+    margin-bottom: 18px;
+    padding-left: 5px;
+} 
+/* bl의 내용 */
+.btm dd{
+    /* 폰트값 */
+    font-family: 'Pretendard-Regular';
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+/* bl 1번/2번 영역 */
+.copyright{
+
+}
+.contact{
+    margin-left: 30px;
+}
+
+.portrait_wrap{
+    display: none;
+}
+}
+@media all and (orientation:portrait){
+    .portrait_wrap{
+        /* 크기값 */
+        width: 100%;
+        height: 100%;
+        /* 위치값 */
+        position: absolute;
+        top:0;
+        left: 0;
+        background-color: #000;
+        /* 텍스트값 */
+        font: bold 1.2rem/1.5 "Helvetica Neue", Arial, sans-serif;
+        text-align: center;
+        padding-top: calc(100vh / 2 - 3rem);
+        color: #fff;
+    }
+    .portrait_wrap p{
+        padding-top: 50px;
+        background: url(../img/portrait.png)49% 0 /40px no-repeat;
+    }
+    .portrait_wrap>p:hover{
+        transform: rotate(90deg);
+    }
+    .b_none{
+        display: block!important;
+    }
+}
+
+
+/* 지우지 말기 */
+/* } */
+/* @media all and (min-width:1200px) and (orientation:landscape) {
+
+}   */
+/* tab size */
+@media all and (max-width:1199px) and (min-width:768px) and (orientation:landscape) {
+
+    /* 헤더영역 */
+    .header_title {
+        line-height: 8vh;
+        /* pc 폰트값 */
+        font-size: 2rem;
+    }
+    .header_text {
+        line-height: 4vh;
+        /* pc 폰트값 */
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 1vh ;
+    }
+    .header_text span {
+        font-size: 1.2rem;
+    }
+
+
+/* 정보영역 */
+.btm{
+    /* 크기값 */
+    width: 70%;
+    /* 정렬 */
+    display: flex;
+    flex-wrap: wrap;
+    float: left;
+    margin-left: 50px;
+}
+.btm>.contact dd{
+    display: flex;
+    flex-direction: column;
+}
+/* bl의 타이틀 */
+.btm dt{
+    /* 폰트값 */
+    font-size: 1.2rem;
+    line-height: 0.8;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #565656;
+    /* 선 아래 영역 */
+    margin-bottom: 12px;
+    padding-left: 5px;
+}
+/* 서브창 */
+.center_con_wrap {
+    width: 80%;
+    height: 98vh;
+    background-color: #fbf5ec;
+    padding: 40px;
+    padding-bottom: 0;
+    position: fixed;
+    border-radius: 30px 30px 0 0;
+    text-align: center;
+    /* transform-origin: 0 0; */
+    bottom: 0;
+    right: 10%;
+    box-shadow: 1px 5px 10px rgb(62 62 62 / 80%);
+    /* display: none; */
+}
+/* 서브창 닫힘버튼 */
+.about_close{
+    width: 100px;
+    height: 100px;
+    /* 크기값 */
+    position: fixed;
+    top: 0;
+    right: 7%;
+    /* 위치값 */
+    background-color: #fbf5ec;
+    border-radius: 60px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    /* 컬러&스타일 */
+    transition-duration: 0.5s;
+}
+.about_close p{
+    width: 80px;
+    height: 80px;
+    border: 1px dashed #727272;
+    /* border: 1px dotted #727272; */
+    border-radius: 50px;
+    position: absolute;
+    top: calc(50% - 40px);
+    left: calc(50% - 40px);
+    line-height: 80px;
+    text-align: center;
+    z-index: 9;
+}
+/* 프로젝트 영역 */
+.folder00 {
+    width: calc(100% / 4 - 2%);
+    height: 55%;
+    font-size: 0.8rem;
+    letter-spacing: -2px;
+    font-weight: 600;
+    transition-duration: 1s;
+    display: none;
+}
+.folder00 img{
+    object-fit: contain;
+}
+.p_title {
+    height: 32%;
+    position: absolute;
+    bottom: -42%;
+    left: 50%;
+    margin-left: calc(-46%);
+}
+/* 말풍선 tab버전 */
+.a_con p::after {
+    top: 0px;
+    left: 0;
+    width: 100px;
+    height: 50px;
+    transform: scale(0.8);
+}
+/* 어바웃 서브창 tab버전 */
+.a_page_title {
+    width: 215px;
+    height: 79px;
+    /* position: absolute; */
+    background: url(../img/one_circle.png)0 0 / 100% no-repeat;
+    /* background-repeat: no-repeat; */
+    margin: 10px auto;
+    text-align: center;
+    line-height: 6.5rem;
+    font-size: 1.6rem;
+}
+/* 인트로1 */
+.a_page2_text {
+    padding: 0 30px;
+}
+.a_page2_text div {
+    padding-top: 1.4rem;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+/* 인트로2 */
+.intro2 {
+    margin-top: 5px;
+}
+.in2_title {
+    font-size: 1.4rem;
+    padding: 11px 0;
+    padding-left: 40px;
+    background: url(../img/ok.png) -40px -9px/ 80px no-repeat;
+    line-height: 1.6rem;
+}
+.in2_text_box {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+}
+/* 어바웃 홈페이지 소개 2번재 br 줄바꿈제거 */
+.a_p_br{
+    display: none;
+}
+
+@media all and (min-width:767px) and (orientation:portrait){
+    .portrait_wrap{
+        /* 크기값 */
+        width: 100%;
+        height: 100%;
+        /* 위치값 */
+        position: absolute;
+        top:0;
+        left: 0;
+        background-color: #000;
+        /* 텍스트값 */
+        font: bold 2rem/1.5 "Helvetica Neue", Arial, sans-serif;
+        text-align: center;
+        padding-top:calc(100vh / 2 - 1rem);
+        color: #fff;
+    }
+
+    .portrait_wrap p{
+        padding-top: 50px;
+        background: url(../img/portrait.png)49% 0 /40px no-repeat;
+    }
+    
+}
+
+}
+@media all and (max-width:767px) {
+
+    /* 헤더영역 */
+    .header_title {
+        line-height: 8vh;
+        /* pc 폰트값 */
+        font-size: 1.8rem;
+    }
+    .header_text {
+        line-height: 4vh;
+        /* pc 폰트값 */
+        font-size: 0.8rem;
+        font-weight: 500;
+        padding: 1vh ;
+    }
+    .header_text span {
+        font-size: 1rem;
+    }
+/* 말풍선 */
+.title p::after {
+    font-size: 0.5rem;
+    line-height: 30px;
+    font-weight: 700;
+    bottom: -180%;
+    right: 30%;
+    width: 60px;
+    height: 36px;
+    background: url(../img/speech_ballons01.png) 0 0 / 120px no-repeat;
+}
+.a_con p::after {
+    content: "";
+    font-size: 0.5rem;
+    line-height: 25px;
+    font-weight: 500;
+    top: 20px;
+    left: 0;
+    width: 50px;
+    height: 25px;
+    /* background-color: #eb4949; */
+    background: url(../img/speech_ballons01.png) 0 0 / 100px no-repeat;
+}
+/* 어바웃 요소 */
+.a_title {
+    top: -37%;
+    left: 50%;
+    margin-left: -40px;
+}
+/* 프로젝트 요소 */
+.folder00 {
+    width: calc(100% / 4 - 5%);
+    font-size: 0.6rem;
+}
+.p_title {
+    bottom: -46px;
+    height: 32%;
+    position: absolute;
+    left: 50%;
+    margin-left: calc(-51%);
+}
+
+/* 정보영역 */
+.btm{
+    /* 크기값 */
+    width: 90%;
+    /* 정렬 */
+    display: flex;
+    flex-wrap: wrap;
+    float: left;
+    margin-left: 50px;
+}
+.btm dd{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+}
+/* bl의 타이틀 */
+.btm dt{
+    /* 폰트값 */
+    display: none;
+}
+/* 서브창 */
+.center_con_wrap {
+    width: 80%;
+    height: 98vh;
+    border-radius: 30px 30px 0 0;
+    bottom: 0;
+    right: 10%;
+    /* display: none; */
+}
+/* 닫힘 버튼 */
+.about_close {
+    width: 100px;
+    height: 100px;
+    top: 0;
+    right: 4%;
+    scale: 0.8;
+}
+.about_close p{
+    width: 80px;
+    height: 80px;
+    border: 1px dashed #727272;
+    /* border: 1px dotted #727272; */
+    border-radius: 50px;
+    position: absolute;
+    top: calc(50% - 40px);
+    left: calc(50% - 40px);
+    line-height: 80px;
+    text-align: center;
+    z-index: 9;
+}
+/* 서브창 타이틀 */
+.a_page_title {
+    width: 33%;
+    height: 15%;
+    background: url(../img/one_circle.png)0 0 / 100% no-repeat;
+    margin: 1% auto;
+    text-align: center;
+    line-height: 5rem;
+    font-size: 1.4rem;
+}
+/* 편지지 */
+.p_leter {
+    width: 27%;
+    height: 27%;
+}
+.p_leter>p {
+    font-size: 1rem;
+    color: #eb4949;
+    position: absolute;
+    rotate: -12deg;
+    top: -32px;
+    left: 6vh;
+}
+/* 프로필정보 */
+.a_page2_text span {
+    font-size: 1rem;
+    line-height: 0;
+}
+.a_page2_text div {
+    /* margin-top: 20px; */
+    width: 100%;
+    height: calc(100% - 3rem);
+    padding-top: 1.2rem;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+}
+/* 자격정보 */
+.a_page2_text {
+    padding: 2% 30px;
+}
+.in2_title {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    position: relative;
+    /* padding-top: 10px; */
+    padding: 3px 0;
+    padding-left: 30px;
+    background: url(../img/ok.png) -30px -5px/ 60px no-repeat;
+    line-height: 2rem;
+}
+.in2_text_box {
+    font-size: 0.8rem;
+    line-height: 1rem;
+}
+/* 홈페이지 소개 */
+.a_page1_photo {
+    width: 67%;
+}
+.a_page1_textbox span {
+    font-size: 1rem;
+    line-height: 1.2rem;
+}
+.a_page1_textbox p {
+    font-size: 0.8rem;
+    line-height: 1rem;
+    margin-top: 10px;
+}
+.ap_but {
+    font-size: 1rem;
+}
+.a_page1_textbox {
+    padding: 2% 0;
+}
+/* 캐릭터 소개 */
+.a_page3_textbox {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+}
+}
